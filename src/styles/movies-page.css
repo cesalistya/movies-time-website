@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.movies-filter {
+  padding: 20px;
+}
+
+.movies-genres {
+  margin-bottom: 20px;
+}
+
+.accordion-button {
+  width: 100%;
+  background-color: #212529 !important;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.accordion-button:hover {
+  background-color: #fff;
+}
+
+.accordion-body {
+  background-color: #212529;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.list-movies-genres {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  padding-bottom: 0;
+}
+
+.item-movies-genres {
+  list-style-type: none;
+  padding: 5px 15px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.item-movies-genres:hover {
+  background-color: #000;
+  border: 1px solid transparent;
+}
+
+.item-movies-genres a {
+  text-decoration: none;
+}
+
+.movies-category {
+  margin-top: 10px;
+}
+
+.list-movies-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-movie-category {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: #d63031;
+  color: #000 !important;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.item-movie-category:hover {
+  opacity: 0.7;
+}

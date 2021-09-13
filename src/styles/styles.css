@@ -1,0 +1,183 @@
+@import "./movies-page.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ecf0f1 !important;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #111;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b2bec3;
+  border-radius: 10px;
+}
+
+.btn-custom {
+  background-color: #d63031;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.btn-custom:hover {
+  opacity: 0.8;
+  color: #fff !important;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 500;
+  font-size: 28px;
+  color: #d63031 !important;
+}
+
+.nav-link {
+  font-weight: 400;
+  color: #000;
+}
+
+.navbar-toggler {
+  background-color: #212529;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-form .form-control {
+  text-align: center;
+  border-color: black;
+}
+
+input[type="search"] {
+  background-color: #f8f8f8;
+  border: 0;
+  color: #000 !important;
+}
+
+@media (min-width: 992px) {
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #f8f8f8;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+banner-list {
+  display: block;
+}
+
+banner-item {
+  display: block;
+}
+
+.carousel-caption {
+  max-width: 35rem;
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-caption #title-movie {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #f39c12 !important;
+  font-weight: 600;
+}
+
+.carousel-caption #description-movie {
+  font-weight: 300;
+}
+
+.carousel-item {
+  display: block;
+  height: 32rem;
+  min-height: 300px;
+}
+
+.carousel-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* Card */
+.movies h2 {
+  font-weight: 500;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: none;
+  background: none;
+  width: 12rem;
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 15px 5px;
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-text span {
+  color: #b2bec3 !important;
+  font-weight: 200;
+}
