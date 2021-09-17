@@ -26,14 +26,25 @@ class DataSource extends HTMLElement {
       .then((responseJson) => {
         console.log(responseJson.results);
         if (responseJson.results) {
-          // every refresh the movies wil change
-          return Promise.resolve(
-            responseJson.results[
-              Math.floor(Math.random() * responseJson.results.length - 1)
-            ]
-          );
+          return Promise.resolve(responseJson.results);
         } else {
           return Promise.reject(`Error : ${results}`);
+        }
+      });
+  }
+
+  static searchMovies(keyword) {
+    return fetch(
+      `${base_url}/search/movie?${api_key}&language=en-US&query=${keyword}&page=1&include_adult=false`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseJson) => {
+        if (responseJson.results) {
+          return Promise.resolve(responseJson.results);
+        } else {
+          return Promise.reject(`${keyword} is not found`);
         }
       });
   }
