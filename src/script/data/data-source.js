@@ -2,8 +2,6 @@
 const api_key = "api_key=e1286cf774d52f51715275c0fe9eb5b1";
 // base url
 const base_url = "https://api.themoviedb.org/3";
-// img url
-const img_url = "https://image.tmdb.org/t/p/original";
 
 // request for movies data
 // const request = {

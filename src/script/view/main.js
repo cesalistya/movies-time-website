@@ -1,3 +1,4 @@
+import "../component/category-list.js";
 import "../component/movie-list.js";
 import "../component/banner-list.js";
 import "../component/header-navbar.js";
@@ -26,7 +27,6 @@ const main = () => {
   const renderResult = (results) => {
     movieListElement.movies = results;
   };
-
   const fallbackResult = (e) => {
     movieListElement.innerHTML = `
       <style>
@@ -66,10 +66,22 @@ const main = () => {
     banner.renderError(message);
   };
 
+  // set genre in banner
   setMovies("trending");
-  searchMovie("Harry");
+  // default list movie
+  searchMovie("the");
 
+  // search movie
   searchElement.clickEvent = onButtonSearchClicked;
+
+  // filter categories
+  const checkbox = document.querySelectorAll("input[type=checkbox]");
+  checkbox.forEach((item) => {
+    item.addEventListener("click", function () {
+      const category = this.getAttribute("data-item");
+      searchMovie(category);
+    });
+  });
 };
 
 export default main;

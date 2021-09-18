@@ -5,8 +5,7 @@ class MovieItem extends HTMLElement {
   }
 
   render() {
-    const img_url = "https://image.tmdb.org/t/p/original/";
-    this.className = "col-lg";
+    this.className = "col mb-4";
     this.innerHTML = `
       <style>
         .card {
@@ -14,6 +13,10 @@ class MovieItem extends HTMLElement {
           background: none;
           width: 12rem;
           cursor: pointer;
+        }
+
+        .card-img {
+          height: 280px;
         }
         
         .card-body {
@@ -27,19 +30,19 @@ class MovieItem extends HTMLElement {
         
         .card-text span {
           color: #b2bec3 !important;
-          font-weight: 200;
+          font-weight: 400;
         }
       </style>
 
-      <div class="card" data-id="${this._movie.id}" style="width: 15rem;">
-        <img src="https://image.tmdb.org/t/p/w500/${this._movie.poster_path}" class="card-img-top" alt="${this._movie.title}"/> 
-        <div class="card-body">
-          <h5 class="card-title text-truncate">${this._movie.title}</h5>
-          <p class="card-text">
-            <span class="float-left">Release Date: ${this._movie.release_date}</span>
-            <span class="float-right">Vote Average: ${this._movie.vote_average}</span>
-          </p>  
-        </div>
+      <div class="card card-movie" data-id="${this._movie.id}">
+          <img src="https://image.tmdb.org/t/p/w500/${this._movie.poster_path}" class="card-img card-img-top" alt="${this._movie.title}" />
+          <div class="card-body">
+              <h5 class="card-title text-truncate">${this._movie.title}</h5>
+              <p class="card-text">
+                  <span>${this._movie.release_date}</span>
+                  <span>${this._movie.vote_average}</span>
+              </p>
+          </div>
       </div>
     `;
   }

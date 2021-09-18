@@ -7,7 +7,7 @@
     <title>Movies Time | Homepage</title>
   </head>
 
-  <body>
+  <body id="home">
     <header>
       <header-navbar></header-navbar>
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -55,56 +55,24 @@
       </div>
     </header>
 
-    <main class="container">
-      <section class="container-xxl movies">
-        <h2 class="mb-2">All Movies</h2>
-        <movie-list></movie-list>
-        <!-- <div class="row row-cols-auto row-cols-md-auto movie-list">
-          <div class="col-lg">
-            <div class="card">
-              <img
-                src="../assets/images/m-1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  <span>June 23, 2018</span>
-                  <span>4.4</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      </section>
-
-      <!-- <section class="row">
+    <main class="container" id="main">
+      <section class="row">
         <div class="col-sm-12 col-md-9">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-            <div class="col mb-4">
-              <div class="card card-movie" data-id="${this._item.id}">
-                <img
-                  src="https://image.tmdb.org/t/p/w500/${this._item.poster_path}"
-                  class="card-img card-img-top"
-                  alt="${this._item.title}"
-                />
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">${this._item.title}</h5>
-                  <p class="card-text">
-                    <span class="float-left">
-                      Release Date : ${this._item.release_date}</span
-                    >
-                    <span class="float-right"
-                      >Vote Average : ${this._item.vote_average}
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 class="mb-4">All Movies</h2>
+          <movie-list id="movies"></movie-list>
         </div>
-      </section> -->
+
+        <div class="d-none d-md-block col-3">
+          <div class="d-flex justify-content-between">
+            <h6>Filter by Genres :</h6>
+            <a href="javascript:void(0)" id="clearFilter" class="text-filter"
+              >Clear filter</a
+            >
+          </div>
+          <hr />
+          <category-list></category-list>
+        </div>
+      </section>
     </main>
   </body>
 </html>
