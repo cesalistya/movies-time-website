@@ -71,11 +71,11 @@ class HeaderNavbar extends HTMLElement {
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#main">All Movies</a>
+              <a class="nav-link" href="#movies">All Movies</a>
             </li>
           </ul>
           
-          <div class="search-form form-group">
+          <div class="search-form form-group" id="form">
             <input placeholder="Search the movies..." class="form-control me-2" id="searchElement" type="search"/>
             <button class="btn btn-dark" id="searchButtonElement" type="button">Search</button>
           </div>

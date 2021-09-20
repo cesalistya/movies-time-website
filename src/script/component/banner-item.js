@@ -1,6 +1,6 @@
 class BannerItem extends HTMLElement {
   set banner(item) {
-    this.item = item;
+    this._item = item;
     this.render();
   }
 
@@ -69,10 +69,10 @@ class BannerItem extends HTMLElement {
       
       </style>
 
-      <img src="https://image.tmdb.org/t/p/original/${this.item.backdrop_path}" class="d-block w-100 bg-placeholder-img" alt="${this.item.original_title}"/>
+      <img src="https://image.tmdb.org/t/p/original/${this._item.backdrop_path}" class="d-block w-100 bg-placeholder-img" alt="${this._item.original_title}"/>
       <div class="carousel-caption text-start">
-        <h1 id="title-movie">${this.item.original_title}</h1>
-        <p id="description-movie">${this.item.overview}</p>
+        <h1 id="title-movie">${this._item.original_title}</h1>
+        <p id="description-movie">${this._item.overview}</p>
         <div class="d-grid gap-2 d-md-block">
           <button class="btn btn-custom" type="button">Play Now</button>
           <button class="btn btn-outline-dark" type="button">More Details</button>

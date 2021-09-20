@@ -10,11 +10,20 @@ const main = () => {
   const banner = document.querySelector("banner-list");
   const movieListElement = document.querySelector("movie-list");
 
-  const onButtonSearchClicked = () => {
-    searchMovie(searchElement.value);
+  // initialization render movie
+  const getMovies = (keyword) => {
+    DataSource.getMovie(keyword).then(renderResult).catch(fallbackResult);
   };
 
-  // movie list
+  // search movie
+  const onButtonSearchClicked = () => {
+    if (onButtonSearchClicked) {
+      searchMovie(searchElement.value);
+    } else {
+      getMovies("discover/movie");
+    }
+  };
+
   const searchMovie = async (keyword) => {
     try {
       const result = await DataSource.searchMovies(keyword);
@@ -44,7 +53,12 @@ const main = () => {
     `;
   };
 
-  // banner
+  // initialization category movie
+  const movieCategory = (id) => {
+    DataSource.categoryMovies(id).then(renderResult).catch(fallbackResult);
+  };
+
+  // initialization banner
   const setMovies = async (keyword) => {
     try {
       const result = await DataSource.bannerMovies(keyword);
@@ -66,10 +80,10 @@ const main = () => {
     banner.renderError(message);
   };
 
+  // render all movies
+  getMovies("discover/movie");
   // set genre in banner
   setMovies("trending");
-  // default list movie
-  searchMovie("the");
 
   // search movie
   searchElement.clickEvent = onButtonSearchClicked;
@@ -79,7 +93,7 @@ const main = () => {
   checkbox.forEach((item) => {
     item.addEventListener("click", function () {
       const category = this.getAttribute("data-item");
-      searchMovie(category);
+      movieCategory(category);
     });
   });
 };

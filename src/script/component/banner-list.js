@@ -2,7 +2,7 @@ import "./banner-item.js";
 
 class BannerList extends HTMLElement {
   set banners(items) {
-    this.items = items;
+    this._items = items;
     this.render();
   }
 
@@ -26,7 +26,7 @@ class BannerList extends HTMLElement {
   render() {
     this.innerHTML = "";
     this.className = "carousel-inner";
-    this.items.forEach((item, i) => {
+    this._items.forEach((item, i) => {
       const bannerItem = document.createElement("banner-item");
       if (i == 0) {
         bannerItem.className = "carousel-item active";

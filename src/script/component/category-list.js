@@ -33,7 +33,7 @@ class CategoryList extends HTMLElement {
       <li class="nav-sidebar-item">
         ${category.name}
         <div class="custom-checkbox float-end">
-          <input class="custom-control-input" type="checkbox" data-item="${category.name}" id="checkbox-${index1}">
+          <input class="custom-control-input" type="checkbox" data-item="${category.id}" id="checkbox-${index1}">
           <label class="custom-control-label" for="checkbox-${index1}"></label>
         </div>
       </li>

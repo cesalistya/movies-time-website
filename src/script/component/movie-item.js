@@ -11,7 +11,7 @@ class MovieItem extends HTMLElement {
         .card {
           border: none;
           background: none;
-          width: 12rem;
+          max-width: 12rem;
           cursor: pointer;
         }
 
@@ -26,6 +26,7 @@ class MovieItem extends HTMLElement {
         .card-text {
           display: flex;
           justify-content: space-between;
+          align-items: center;
         }
         
         .card-text span {
@@ -40,7 +41,10 @@ class MovieItem extends HTMLElement {
               <h5 class="card-title text-truncate">${this._movie.title}</h5>
               <p class="card-text">
                   <span>${this._movie.release_date}</span>
-                  <span>${this._movie.vote_average}</span>
+                  <span>
+                    <i class="bi bi-star-fill"></i>
+                    ${this._movie.vote_average}
+                  </span>
               </p>
           </div>
       </div>
