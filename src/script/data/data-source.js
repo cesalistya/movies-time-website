@@ -49,7 +49,7 @@ class DataSource extends HTMLElement {
       });
   }
 
-  static categoryMovies(id) {
+  static genreMovies(id) {
     return fetch(`${base_url}/discover/movie?${api_key}&with_genres=${id}`)
       .then((response) => {
         return response.json();

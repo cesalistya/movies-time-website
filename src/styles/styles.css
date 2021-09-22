@@ -46,3 +46,32 @@ movie-list {
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
+
+/* Movie Category */
+#tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  color: white;
+  font-weight: 400;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #212529;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: #d63031;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.tag.highlight {
+  background-color: #d63031;
+  color: #000 !important;
+  font-weight: 600;
+}
