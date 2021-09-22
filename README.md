@@ -17,7 +17,7 @@
 
 # Screenshoot
 
-![main](src/assets/Movies-Time.mp4)
+![main](src/assets/Movies-Time.png)
 
 - Instagram - [cesalstys](https://www.instagram.com/cesalstys/)
 - Linkedin - [cesalistya](https://www.linkedin.com/in/cesa-listya-sholiha-b6a3091aa/)
